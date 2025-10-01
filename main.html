@@ -1,0 +1,158 @@
+<style>
+	header{
+		background-color: rgb(255, 255, 255);
+		color: black;
+		font-size: 30px;
+		text-align: right;
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		border-bottom-color: black;
+		border-bottom-style:outset;
+		border-bottom-width: 2px;
+
+	}
+	body{
+		background-color: white;
+		color: black;
+		font-size: 16px;
+		text-align: center;
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		
+	}
+	button {
+		background-color: rgb(252, 255, 255);
+		color: black;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size:16px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 10px;
+		padding-bottom: 12px;
+		transition-duration: 0.4s;
+		margin-right: 10px;
+		margin-left: 5px;
+		vertical-align:top;
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		
+	}
+	button:hover{
+		background-color:rgb(199, 208, 208);
+		color: black;
+		box-shadow:0 12px 16px 0 rgba(0, 0, 0, 0.24 ),  0 17px 50px 0 rgba(0,0,0,0.19);
+		
+	}
+	button:active{
+		background-color:rgb(151, 153, 153);
+		color: black;
+	}
+	.title{
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align: left;
+		font-weight:bold;
+		font-size: 30px;
+		line-height: 10px;
+		margin-left: 50px;
+		padding-top: 150px;
+	}
+	.subtitle{
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align: left;
+		font-size: 20px;
+		line-height: 5px;
+		margin-left: 50px;
+		padding-bottom: 50px;
+		
+	}
+	.desc{
+		padding-bottom: 277px;
+		font-size: 16px;
+		margin-left: 35px;
+
+	}
+	footer{
+		vertical-align: bottom;
+		border-top-color: black;
+		border-top-width: 1px;
+		border-top-style: groove;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+	
+	.container {
+	 	display: grid;
+	 	align-items: center; 
+	 	grid-template-columns: 1fr 1fr;
+		column-gap: 5px;
+	}
+	img{
+		padding-bottom: 50px;
+		width: 70%;
+		height: auto;
+		max-width: 100%;
+	}
+	@media (max-width: 768px)
+	{
+		.container {
+			grid-template-columns: 1fr;
+        	row-gap: 20px;
+    		}
+    	.title{
+       	 	text-align: center;
+        	margin-left: 0;
+        	padding-top: 50px;
+    		}
+		.subtitle{
+			text-align: center;
+        	margin-left: 0;
+        	padding-top: 30px;
+			font-size: 15px;
+		}
+			.desc{
+				text-align: center;
+        		margin-left: 0;
+        		padding-top: 50px;
+				padding-bottom: 10px;
+			}
+	}
+	
+</style>
+<header>
+		<button onclick="window.open('https://github.com/ethanro2'  , '_blank')">
+			GitHub
+	  	</button>
+		<button onclick="window.open('https://www.linkedin.com/in/ethan-robinson-260335317/'  , '_blank')">
+			LinkedIn
+		</button>
+	 
+		<button onclick="window.location.href='about.html'">
+			About Me
+		</button>
+
+</header>
+
+<body>
+	<div class="container">
+		<div class="text">
+			<p class="title">
+				Ethan Robinson
+			</p>
+			
+			<p class="subtitle">
+				Software Developer &#183 CS Student at Oregon State University
+			</p>
+			<p class="desc">
+				An ambitious, motivated Computer Science student looking to make his mark in the modern tech industry. Proficient in C++, C, Python, HTML, and CSS.
+		</div>
+		<div class="image">
+			<img src="mainpagepic.jpg" alt="Headshot Photo">
+		</div>
+		
+	</div>
+</body>
+
+<footer>
+	<a href="mailto:ethanro2020@gmail.com">Email: ethanro2020@gmail.com</a>
+</footer>
+
+
+
