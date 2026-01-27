@@ -2,22 +2,22 @@
 <html>
 	<head>
 		<title>About-E.Robinson</title>
-
 <style>
 	html, body{
 		margin: 0;
 		padding: 0;
 	}
 	header{
-		background-color: rgb(255, 255, 255);
-		color: black;
+		background-color: black;
+		color: rgb(145, 141, 141);
 		font-size: 30px;
 		text-align: right;
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		border-bottom-color: black;
 		border-bottom-style:outset;
 		border-bottom-width: 2px;
-
+		padding-bottom: 7px;
+		padding-top: 5px;
 	}
 	body{
 		background-color: white;
@@ -75,15 +75,23 @@
     .subtitle{
         font-weight: bold;
     }
-    footer{
+	footer{
+		background-color: black;
+		color: white;
 		vertical-align: bottom;
 		border-top-color: black;
 		border-top-width: 1px;
 		border-top-style: groove;
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		margin-bottom: 1px;
-		padding-bottom: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 4px;
+		padding-top: 4px;
 		margin-top: 66px;
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		text-align: center;
 	}
     .Body-text{
         padding-left: 200px;
@@ -99,6 +107,53 @@
 		width: 19%;
 		max-width: 100%;
 	}
+
+	.email-link{
+		margin-bottom: 5px;
+		margin-top: 5px;
+		font-size: 17px;
+	}
+
+	.email-link:hover{
+		cursor: pointer;
+		color: rgb(186, 182, 182);
+	}
+	.email-link:active{
+		color: rgb(127, 125, 125);
+	}
+	
+	.hidden{
+		display: none;
+	}
+	.email-page{
+		background-color: rgb(246, 244, 244);
+		border-radius: 15px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		color: black;
+		padding: 40px 15px 40px 15px;
+		position: fixed;
+		bottom: 250px;
+		right: 500px;
+		border: none;
+		text-align: center;
+		font-size: 15px;
+		box-shadow: 0 0 600px 600px rgba(0, 0, 0, 0.24 ),  0 0 600px 600px rgba(0,0,0,0.19);
+	}
+	.email-container{
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+
+	.x-button{
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		color: rgb(109, 107, 107);
+		position: absolute;
+		top: 5px;
+		right: 5px;
+
+	}
+	
+	
 	@media (max-width: 768px)
 	{
 		img{
@@ -131,9 +186,9 @@
 </header>
 
 <body>
-    <p class="Title">
+    <h1 class="Title">
         About Me
-    </p>
+	</h1>
     <p class="Subtitle">
         A highly-motivated CS student and amateur Software Developer
     </p>
@@ -154,18 +209,37 @@
     <p class="Body-text">
         In 2023, I began my studies in Computer Science at Chemeketa Community College where I would earn my Associate's of Science.
 		During my time there, I became skilled in a lot of different areas of software development, learning languages such as C++, C, Python, and Assembly.
-		Additionally, I learned much of the theory and mathematics involved in computations, ranging from data structures, algorithms, to even a basic understanding of the fundamentals of machine learning.
+		Additionally, I learned much of the theory and mathematics involved in computations, such as data structures and algorithms.
 		In the fall of 2025, I continued my studies at Oregon State University where I am now pursuing my Bachelor's of Science in CS, with a focus on Computer Systems.
-		My goal is to grow my skills and knowledge of software engineering and development and ultimately, contribute to the advancements and innovations of today and the future.
+		My goal is to grow my skills and knowledge of software engineering and ultimately, contribute to the advancements and innovations of today and the future.
     </p>
 	<p>
 
 	</p>
-</body>
+
 
 <footer>
-	<a href="mailto:ethanro2020@gmail.com">Email: ethanro2020@gmail.com</a>
+	<a class="email-link" id="email-link">Contact Me</a>
 </footer>
+<div class="hidden email-page" id="email-page">
+	<div class="x-button" id="x-button">
+		<button class="x-button" id="x-button">X</button>
+	</div>
+	<div class="email-container">
+		<a href="mailto:ethanro2020@gmail.com">Professional Email</a>
+		<p>
+			Primary contact for jobs, internships, and other general inquiries.
+		</p>
+	</div>
+	<div class="email-container">
+		<a href="mailto:robinset@oregonstate.edu">OSU Email</a>
+		<p>
+			Academic, research, or OSU-related communication.
+		</p>
+	</div>
+</div>
+<script src="index.js"></script>
+</body>
 
 
 </html>

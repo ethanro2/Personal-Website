@@ -8,15 +8,17 @@
 		padding: 0;
 	}
 	header{
-		background-color: rgb(255, 255, 255);
-		color: black;
+		background-color: black;
+		color: rgb(145, 141, 141);
 		font-size: 30px;
 		text-align: right;
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		border-bottom-color: black;
 		border-bottom-style:outset;
 		border-bottom-width: 2px;
-
+		padding-bottom: 7px;
+		padding-top: 5px;
+		
 	}
 	body{
 		background-color: white;
@@ -43,7 +45,7 @@
 		margin-top: 5px;
 		vertical-align:top;
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		
+
 	}
 	button:hover{
 		background-color:rgb(199, 208, 208);
@@ -61,30 +63,38 @@
 		font-weight:bold;
 		font-size: 30px;
 		line-height: 10px;
-		margin-left: 50px;
-		padding-top: 150px;
+		margin-left: 80px;
+		padding-top: 10px;
 	}
 	.subtitle{
 		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		text-align: left;
 		font-size: 20px;
 		line-height: 5px;
-		margin-left: 50px;
-		padding-bottom: 50px;
+		margin-left: 80px;
+		padding-bottom: 10px;
 		
 	}
 	.desc{
-		padding-bottom: 277px;
 		font-size: 16px;
-		margin-left: 35px;
+		margin-left: 80px;
 
 	}
 	footer{
+		background-color: black;
+		color: white;
 		vertical-align: bottom;
 		border-top-color: black;
 		border-top-width: 1px;
 		border-top-style: groove;
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		text-align: center;
 	}
 	
 	.container {
@@ -98,7 +108,68 @@
 		width: 70%;
 		height: auto;
 		max-width: 100%;
+		border-radius: 30%;
+		opacity: 95%;
 	}
+	.email-link{
+		margin-bottom: 5px;
+		margin-top: 5px;
+		font-size: 17px;
+		color: white;
+	}
+
+	.email-link:hover{
+		cursor: pointer;
+		color: rgb(186, 182, 182);
+	}
+	.email-link:active{
+		color: rgb(127, 125, 125);
+	}
+	
+	.hidden{
+		display: none;
+	}
+	.email-page{
+		background-color: rgb(246, 244, 244);
+		border-radius: 15px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		color: black;
+		padding: 40px 15px 40px 15px;
+		position: fixed;
+		bottom: 250px;
+		right: 500px;
+		border: none;
+		text-align: center;
+		font-size: 15px;
+		box-shadow: 0 0 600px 600px rgba(0, 0, 0, 0.24 ),  0 0 600px 600px rgba(0,0,0,0.19);
+	}
+
+	.x-button{
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		color: rgb(109, 107, 107);
+		position: absolute;
+		top: 5px;
+		right: 5px;
+
+	}
+	.email-container{
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+
+	.pages-links{
+		font-size: 16px;
+	}
+	a{
+		color: rgb(49, 143, 231);
+	}
+	a:hover{
+		color: rgb(113, 186, 254);
+	}a:active{
+		color: rgb(15, 108, 196);
+	}
+
+	
 	@media (max-width: 768px)
 	{
 		.container {
@@ -122,7 +193,9 @@
         		padding-top: 50px;
 				padding-bottom: 10px;
 			}
+
 	}
+
 	
 </style>
 
@@ -152,18 +225,42 @@
 				Computer Science Student at Oregon State University
 			</p>
 			<p class="desc">
-				An ambitious, motivated Computer Science student looking to make his mark in the modern tech industry. Proficient in C++, C, Python, HTML, and CSS.
+				An ambitious, motivated Computer Science student looking to make his mark in the modern tech industry. Proficient in C++, C, Python, HTML, JavaScript, and CSS.
+			</p>
+			<p class="pages-links">
+				<a href="projects.html">Projects</a>    &#9679    <a href="resume.pdf"  target="_blank" rel="noopener">Resume</a>
+			</p>
 		</div>
 		<div class="image">
 			<img src="mainpagepic.jpg" alt="Headshot Photo">
 		</div>
 		
 	</div>
-</body>
+
 
 <footer>
-	<a href="mailto:ethanro2020@gmail.com">Email: ethanro2020@gmail.com</a>
+	<a class="email-link" id="email-link">Contact Me</a>
 </footer>
+
+<div class="hidden email-page" id="email-page">
+	<div class="x-button" id="x-button-container">
+		<button class="x-button" id="x-button">X</button>
+	</div>
+	<div class="email-container">
+		<a href="mailto:ethanro2020@gmail.com">Professional Email</a>
+		<p>
+			Primary contact for jobs, internships, and other general inquiries.
+		</p>
+	</div>
+	<div class="email-container">
+		<a href="mailto:robinset@oregonstate.edu">OSU Email</a>
+		<p>
+			Academic, research, or OSU-related communication.
+		</p>
+	</div>
+</div>
+<script src="index.js"></script>
+</body>
 
 </html>
 
